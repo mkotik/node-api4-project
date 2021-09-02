@@ -11,7 +11,7 @@ const users = [
 
 server.use(express.json());
 server.use(cors());
-server.use(express.static(path.join(__dirname, "client/build", "index.html")));
+server.use(express.static(path.join(__dirname, "client/build")));
 
 server.get("/api/users", (req, res) => {
   res.status(200).json({ users: users });
